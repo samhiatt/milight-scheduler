@@ -6,7 +6,7 @@ controller = milight.MiLight({'host': '192.168.42.100', 'port': 8899}, wait_dura
 light = milight.LightBulb(['white'])
 
 def dawn():
-	controller.send(light.warmness(100))
+	controller.send(light.warmness(50))
 	controller.send(light.brightness(70))
 	print("%s --- Lights set to dawn.\n" % str(datetime.datetime.now()))
 
@@ -22,6 +22,6 @@ def sunset():
 
 def dusk():
         controller.send(light.brightness(20))
-        controller.send(light.warmness(0))
+        controller.send(light.warmness(100))
 	print("%s --- Lights set to dusk.\n" % str(datetime.datetime.now()))
 
