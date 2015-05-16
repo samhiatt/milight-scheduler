@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import milight
+import milight, datetime
 
 
 controller = milight.MiLight({'host': '192.168.42.100', 'port': 8899}, wait_duration=0)
