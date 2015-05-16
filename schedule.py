@@ -55,7 +55,7 @@ logfile.write("Scheduled sunset for  %s.\n" % str(sun['sunset']))
 s.enterabs(sun['dusk'], 1, dusk, ())
 logfile.write("Scheduled dusk for    %s.\n" % str(sun['dusk']))
 
-secs = (sun['dusk']-datetime.datetime.now(sun['dusk'].tzinfo)).seconds
+secs = (sun['dusk']-datetime.datetime.now(sun['dusk'].tzinfo)).seconds+1
 logfile.write("%s --- Sleeping for %s seconds.\n" % (str(datetime.datetime.now()),secs))
 logfile.flush()
 time.sleep(secs)
